@@ -26,5 +26,6 @@
             super.viewDidAppear()
 
             self.view.window?.title = ViewController.APP_TITLE
+            self.view.window?.styleMask.remove( .resizable )
         }
     }
