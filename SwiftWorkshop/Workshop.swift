@@ -11,5 +11,6 @@
          */
         init()
         {
+            print( "Welcome to the " + ViewController.APP_TITLE )
         }
     }
