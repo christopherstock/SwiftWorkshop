@@ -12,12 +12,21 @@
         /** The height of the scene. */
         static let HEIGHT :Int = 600
 
+        /** The SpriteKit view reference. */
+        var skView :SKView
+
         /**
-            Creates the custom camera, adds it to the scene and assigns it to the SpriteKitScene.
+            Creates the custom SpriteKit scene and presents it in a SpriteKit view.
         */
         override init()
         {
+            skView = SKView()
+
             super.init( size: ( CGSize( width: Scene.WIDTH, height: Scene.HEIGHT ) ) )
+
+            skView.frame = self.frame
+            skView.presentScene( self )
+            skView.showsFPS = true
         }
 
         /**
