@@ -16,6 +16,8 @@
         override func viewDidLoad() -> Void
         {
             super.viewDidLoad()
+
+            let workshop = Workshop()
         }
 
         /**
