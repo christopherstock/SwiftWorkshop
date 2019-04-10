@@ -18,6 +18,7 @@
             super.viewDidLoad()
 
             let workshop = Workshop()
+            workshop.appendWorkshopView( to: self.view )
         }
 
         /**
