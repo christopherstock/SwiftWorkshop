@@ -1,18 +1,18 @@
 
     import Cocoa
 
-    /**
-        The native ViewController.
-    */
+    ///
+    /// The native ViewController.
+    ///
     class ViewController : NSViewController
     {
-        /** The application title. */
+        /// The application title.
         static let APP_TITLE = "Swift / SpriteKit Workshop, (c) 2019 Mayflower GmbH"
 
-        /**
-            Being invoked after the view has been loaded.
-            Sets up the view after being loaded.
-        */
+        ///
+        /// Being invoked after the view has been loaded.
+        /// Sets up the view after being loaded.
+        ///
         override func viewDidLoad() -> Void
         {
             super.viewDidLoad()
@@ -21,9 +21,9 @@
             workshop.appendWorkshopView( to: self.view )
         }
 
-        /**
-            Being invoked after the view has appeared on the screen.
-        */
+        ///
+        /// Being invoked after the view has appeared on the screen.
+        ///
         override func viewDidAppear() -> Void
         {
             super.viewDidAppear()
