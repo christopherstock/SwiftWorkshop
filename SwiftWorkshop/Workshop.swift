@@ -10,6 +10,8 @@
     {
         /// The custom implementation of the SpriteKit scene.
         var scene :Scene
+        /// The game level instance.
+        var level :Level
 
         ///
         /// Creates a new game workshop instance.
@@ -19,6 +21,7 @@
             print( "Welcome to the " + ViewController.APP_TITLE )
 
             scene = Scene()
+            level = Level()
         }
 
         ///

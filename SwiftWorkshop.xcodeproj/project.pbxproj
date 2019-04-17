@@ -40,6 +40,7 @@
 		E95EEE90225B598300A1C23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EEE8F225B598300A1C23F /* ViewController.swift */; };
 		E95EEE92225B598600A1C23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95EEE91225B598600A1C23F /* Assets.xcassets */; };
 		E95EEE95225B598600A1C23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95EEE93225B598600A1C23F /* Main.storyboard */; };
+		E98D22EE22670F130096CCAB /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D22ED22670F130096CCAB /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		E95EEE94225B598600A1C23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E95EEE96225B598600A1C23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95EEE97225B598600A1C23F /* SwiftWorkshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftWorkshop.entitlements; sourceTree = "<group>"; };
+		E98D22ED22670F130096CCAB /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		E95EEE8C225B598300A1C23F /* SwiftWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				E98D22EC22670EFE0096CCAB /* game */,
 				E93E3006225E54E3006B111B /* engine */,
 				E93E3004225E24CA006B111B /* Workshop.swift */,
 				E95EEE8D225B598300A1C23F /* AppDelegate.swift */,
@@ -220,6 +223,14 @@
 				E95EEE97225B598600A1C23F /* SwiftWorkshop.entitlements */,
 			);
 			path = SwiftWorkshop;
+			sourceTree = "<group>";
+		};
+		E98D22EC22670EFE0096CCAB /* game */ = {
+			isa = PBXGroup;
+			children = (
+				E98D22ED22670F130096CCAB /* Level.swift */,
+			);
+			path = game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				E93E3008225E5510006B111B /* Scene.swift in Sources */,
 				E95EEE90225B598300A1C23F /* ViewController.swift in Sources */,
 				E93E3005225E24CA006B111B /* Workshop.swift in Sources */,
+				E98D22EE22670F130096CCAB /* Level.swift in Sources */,
 				E95EEE8E225B598300A1C23F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
