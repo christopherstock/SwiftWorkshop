@@ -13,11 +13,12 @@
         ///
         /// Creates a new game object.
         ///
+        /// - parameter scene:     The SpriteKit scene to add this game object to.
         /// - parameter x:         The startup position x.
         /// - parameter y:         The startup position y.
         /// - parameter imageFile: The image that represents this game object.
         ///
-        init( x: CGFloat, y: CGFloat, imageFile: String )
+        init( scene: SKScene, x: CGFloat, y: CGFloat, imageFile: String )
         {
             // load image file
             let image   = NSImage( named: imageFile )!
@@ -27,5 +28,8 @@
             node          = SKSpriteNode( texture: texture )
             node.size     = texture.size()
             node.position = CGPoint( x: x, y: y )
+
+            // add SpriteKit node to the SpriteKit scene
+            scene.addChild( node )
         }
     }

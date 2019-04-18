@@ -1,4 +1,6 @@
 
+    import SpriteKit
+
     ///
     /// The game level that manages all game objects.
     ///
@@ -7,7 +9,9 @@
         ///
         /// Creates a new instance of the game level.
         ///
-        init()
+        /// - parameter scene: The SpriteKit scene to add all game objects to.
+        ///
+        init( scene: SKScene )
         {
         }
     }

@@ -21,7 +21,7 @@
             print( "Welcome to the " + ViewController.APP_TITLE )
 
             scene = Scene()
-            level = Level()
+            level = Level( scene: scene )
         }
 
         ///
