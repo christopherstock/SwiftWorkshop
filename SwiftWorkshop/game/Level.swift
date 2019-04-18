@@ -30,11 +30,11 @@
             boxes = []
             items = []
 
-            decos.append( GameObject( scene: scene, x: 0,    y: 0,   imageFile: "foreground.png" ) )
-            walls.append( GameObject( scene: scene, x: 500,  y: 0,   imageFile: "stone1.png"     ) )
-            boxes.append( GameObject( scene: scene, x: 300,  y: 0,   imageFile: "box1.png"       ) )
-            items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png"  ) )
+            decos.append( GameObject( scene: scene, x: 0,    y: 0,   imageFile: "foreground.png", enablePhysics: false ) )
+            walls.append( GameObject( scene: scene, x: 500,  y: 0,   imageFile: "stone1.png",     enablePhysics: true  ) )
+            boxes.append( GameObject( scene: scene, x: 300,  y: 0,   imageFile: "box1.png",       enablePhysics: true  ) )
+            items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png",  enablePhysics: true  ) )
 
-            player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png" )
+            player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png", enablePhysics: true )
         }
     }
