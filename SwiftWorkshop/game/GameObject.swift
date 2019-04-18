@@ -27,7 +27,10 @@
             // create SpriteKit node
             node          = SKSpriteNode( texture: texture )
             node.size     = texture.size()
-            node.position = CGPoint( x: x, y: y )
+            node.position = CGPoint(
+                x: x + ( node.size.width  / 2 ),
+                y: y + ( node.size.height / 2 )
+            )
 
             // add SpriteKit node to the SpriteKit scene
             scene.addChild( node )
