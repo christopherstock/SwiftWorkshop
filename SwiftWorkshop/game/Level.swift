@@ -35,12 +35,12 @@
             boxes = []
             items = []
 
-            decos.append( GameObject( scene: scene, x: 0,    y: 0,   imageFile: "foreground.png", enablePhysics: false ) )
-            walls.append( GameObject( scene: scene, x: 500,  y: 0,   imageFile: "stone1.png",     enablePhysics: true  ) )
-            boxes.append( GameObject( scene: scene, x: 300,  y: 0,   imageFile: "box1.png",       enablePhysics: true  ) )
-            items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png",  enablePhysics: true  ) )
+            decos.append( GameObject( scene: scene, x: 0,    y: 0,   imageFile: "foreground.png", physic: Physic.none  ) )
+            walls.append( GameObject( scene: scene, x: 500,  y: 0,   imageFile: "stone1.png",     physic: Physic.wall  ) )
+            boxes.append( GameObject( scene: scene, x: 300,  y: 0,   imageFile: "box1.png",       physic: Physic.crate ) )
+            items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png",  physic: Physic.none  ) )
 
-            player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png", enablePhysics: true )
+            player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png", physic: Physic.player )
 
             // add level bounds
             createLevelBounds( scene: scene )
