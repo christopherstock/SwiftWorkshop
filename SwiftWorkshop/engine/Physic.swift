@@ -1,5 +1,4 @@
 
-    import SpriteKit
     import Foundation
 
     ///
@@ -7,13 +6,13 @@
     ///
     struct Physic
     {
-        /// Uncollidable physics.
+        /// Uncollidable physics ( decoration or items ).
         static var none   :Physic = Physic( enabled: false, isDynamic: false, mass: 0.0,  restitution: 0.0, friction: 0.0 )
         /// The player body.
         static var player :Physic = Physic( enabled: true,  isDynamic: true,  mass: 25.0, restitution: 0.0, friction: 0.0 )
-        /// Non movable colliding walls.
+        /// Non movable, colliding walls.
         static var wall   :Physic = Physic( enabled: true,  isDynamic: false, mass: 0.0,  restitution: 0.0, friction: 0.2 )
-        /// The wooden crate.
+        /// The movable create.
         static var box    :Physic = Physic( enabled: true,  isDynamic: true,  mass: 40.0, restitution: 0.0, friction: 1.0 )
 
         /// If physics are enabled so the body is collidable.
