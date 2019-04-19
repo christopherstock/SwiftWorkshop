@@ -6,6 +6,11 @@
     ///
     class Level
     {
+        /** Level width in px. */
+        static let WIDTH  :Int = 5120
+        /** Level height in px. */
+        static let HEIGHT :Int = 720
+
         /// Non collidable decoration.
         private var decos  :[GameObject]
         /// Collidable static walls.
@@ -36,5 +41,30 @@
             items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png",  enablePhysics: true  ) )
 
             player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png", enablePhysics: true )
+
+            // add level bounds
+            createLevelBounds( scene: scene )
+        }
+
+        /**
+         Creates the four level bounds that surround this level.
+
+         - parameter scene: The SpriteKit scene to apply the level bounds to.
+         */
+        private func createLevelBounds( scene:SKScene ) -> Void
+        {
+            let boundaries :[SKShapeNode] = [
+                SKShapeNode( rect: CGRect( x: 0,           y: 0           , width: Level.WIDTH, height: 0            ) ),
+                SKShapeNode( rect: CGRect( x: 0,           y: 0           , width: 0,           height: Level.HEIGHT ) ),
+                SKShapeNode( rect: CGRect( x: Level.WIDTH, y: 0           , width: Level.WIDTH, height: Level.HEIGHT ) ),
+                SKShapeNode( rect: CGRect( x: 0,           y: Level.HEIGHT, width: Level.WIDTH, height: Level.HEIGHT ) ),
+            ]
+
+            for boundary in boundaries
+            {
+                boundary.physicsBody = SKPhysicsBody( edgeChainFrom: boundary.path! )
+
+                scene.addChild( boundary )
+            }
         }
     }
