@@ -13,7 +13,7 @@
         /// Non movable, colliding walls.
         static var wall   :Physic = Physic( enabled: true,  isDynamic: false, mass: 0.0,  restitution: 0.0, friction: 0.2 )
         /// The movable create.
-        static var box    :Physic = Physic( enabled: true,  isDynamic: true,  mass: 40.0, restitution: 0.0, friction: 1.0 )
+        static var crate  :Physic = Physic( enabled: true,  isDynamic: true,  mass: 40.0, restitution: 0.0, friction: 1.0 )
 
         /// If physics are enabled so the body is collidable.
         var enabled     :Bool
