@@ -13,13 +13,12 @@
         ///
         /// Creates a new game object.
         ///
-        /// - parameter scene:         The SpriteKit scene to add this game object to.
-        /// - parameter x:             The startup position x.
-        /// - parameter y:             The startup position y.
-        /// - parameter imageFile:     The image that represents this game object.
-        /// - parameter enablePhysics: Enable a testwise physical body.
+        /// - parmeter scene:  The SpriteKit scene to add this game object to.
+        /// - parmeter x:      The startup position x.
+        /// - parmeter y:      The startup position y.
+        /// - parmeter physic: Physical attributes for this game object.
         ///
-        init( scene: SKScene, x: CGFloat, y: CGFloat, imageFile: String, enablePhysics: Bool )
+        init( scene: SKScene, x: CGFloat, y: CGFloat, imageFile: String, physic: Physic )
         {
             // load image file
             let image   = NSImage( named: imageFile )!
@@ -33,10 +32,10 @@
                 y: y + ( node.size.height / 2 )
             )
 
-            // set testwise physical behaviour
-            if ( enablePhysics )
+            // add a physical body if enabled
+            if ( physic.enabled )
             {
-                self.addPhysicsBody()
+                self.addPhysicsBody( physic: physic )
             }
 
             // add SpriteKit node to the SpriteKit scene
@@ -46,14 +45,16 @@
         ///
         /// Creates the physical body for this game object.
         ///
-        private func addPhysicsBody() -> Void
+        /// - parameter physic: The physical behaviour to apply to this game object.
+        ///
+        private func addPhysicsBody( physic: Physic ) -> Void
         {
             node.physicsBody = SKPhysicsBody( texture: node.texture!, size: node.size )
 
-            node.physicsBody?.isDynamic   = true
+            node.physicsBody?.isDynamic   = physic.isDynamic
 
-            node.physicsBody?.mass        = 1.0
-            node.physicsBody?.restitution = 1.0
-            node.physicsBody?.friction    = 0.0
+            node.physicsBody?.mass        = physic.mass
+            node.physicsBody?.restitution = physic.restitution
+            node.physicsBody?.friction    = physic.friction
         }
     }
