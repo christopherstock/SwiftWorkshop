@@ -42,6 +42,7 @@
 		E95EEE95225B598600A1C23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95EEE93225B598600A1C23F /* Main.storyboard */; };
 		E98D22EE22670F130096CCAB /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D22ED22670F130096CCAB /* Level.swift */; };
 		E9957F0B2268665F0055DC66 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9957F0A2268665F0055DC66 /* GameObject.swift */; };
+		E9957F0D2268B1090055DC66 /* Physic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9957F0C2268B1090055DC66 /* Physic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		E95EEE97225B598600A1C23F /* SwiftWorkshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftWorkshop.entitlements; sourceTree = "<group>"; };
 		E98D22ED22670F130096CCAB /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		E9957F0A2268665F0055DC66 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		E9957F0C2268B1090055DC66 /* Physic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E93E3007225E5510006B111B /* Scene.swift */,
+				E9957F0C2268B1090055DC66 /* Physic.swift */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				E9957F0B2268665F0055DC66 /* GameObject.swift in Sources */,
 				E93E3005225E24CA006B111B /* Workshop.swift in Sources */,
 				E98D22EE22670F130096CCAB /* Level.swift in Sources */,
+				E9957F0D2268B1090055DC66 /* Physic.swift in Sources */,
 				E95EEE8E225B598300A1C23F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
