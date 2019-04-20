@@ -3,6 +3,19 @@
     import SpriteKit
 
     ///
+    /// Offers all cocoa specific keyCodes for the primal game keys.
+    ///
+    enum KeyCode : UInt16
+    {
+        /** Arrow Left key. */
+        case ARROW_LEFT  = 123
+        /** Arrow Right key. */
+        case ARROW_RIGHT = 124
+        /** Arrow Up key. */
+        case ARROW_UP    = 126
+    }
+
+    ///
     /// The input controller that recognizes key events.
     ///
     class KeySystem
@@ -43,9 +56,9 @@
         ///
         /// - returns: *true* if the key with the queried keyCode is currently pressed. Otherwise *false*.
         ///
-        func isPressed( keyCode:UInt16 ) -> Bool
+        func isPressed( keyCode:KeyCode ) -> Bool
         {
-            if let pressed = pressed[ keyCode ]
+            if let pressed = pressed[ keyCode.rawValue ]
             {
                 return pressed
             }
