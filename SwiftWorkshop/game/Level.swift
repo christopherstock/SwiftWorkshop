@@ -6,9 +6,9 @@
     ///
     class Level
     {
-        /** Level width in px. */
+        /// Level width in px.
         static let WIDTH  :Int = 5120
-        /** Level height in px. */
+        /// Level height in px.
         static let HEIGHT :Int = 720
 
         /// Non collidable decoration.
@@ -46,11 +46,11 @@
             createLevelBounds( scene: scene )
         }
 
-        /**
-         Creates the four level bounds that surround this level.
-
-         - parameter scene: The SpriteKit scene to apply the level bounds to.
-         */
+        ///
+        /// Creates the four level bounds that surround this level.
+        ///
+        /// - parameter scene: The SpriteKit scene to apply the level bounds to.
+        ///
         private func createLevelBounds( scene:SKScene ) -> Void
         {
             let boundaries :[SKShapeNode] = [
