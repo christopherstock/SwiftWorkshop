@@ -9,9 +9,11 @@
     class Workshop
     {
         /// The custom implementation of the SpriteKit scene.
-        var scene :Scene
+        var scene     :Scene
         /// The game level instance.
-        var level :Level
+        var level     :Level
+        /** The key system. */
+        var keySystem :KeySystem
 
         ///
         /// Creates a new game workshop instance.
@@ -20,8 +22,9 @@
         {
             print( "Welcome to the " + ViewController.APP_TITLE )
 
-            scene = Scene()
-            level = Level( scene: scene )
+            scene     = Scene()
+            level     = Level( scene: scene )
+            keySystem = KeySystem()
         }
 
         ///

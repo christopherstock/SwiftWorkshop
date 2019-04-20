@@ -34,6 +34,7 @@
 		E927ECB3225E022300F78063 /* plum.png in Resources */ = {isa = PBXBuildFile; fileRef = E927EC97225E022200F78063 /* plum.png */; };
 		E927ECB4225E022300F78063 /* walkLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = E927EC99225E022200F78063 /* walkLeft.png */; };
 		E927ECB5225E022300F78063 /* walkRight.png in Resources */ = {isa = PBXBuildFile; fileRef = E927EC9A225E022200F78063 /* walkRight.png */; };
+		E93AD632226B8BEA0042ADBE /* KeySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AD631226B8BEA0042ADBE /* KeySystem.swift */; };
 		E93E3005225E24CA006B111B /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E3004225E24CA006B111B /* Workshop.swift */; };
 		E93E3008225E5510006B111B /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E3007225E5510006B111B /* Scene.swift */; };
 		E95EEE8E225B598300A1C23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EEE8D225B598300A1C23F /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		E927EC97225E022200F78063 /* plum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plum.png; sourceTree = "<group>"; };
 		E927EC99225E022200F78063 /* walkLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkLeft.png; sourceTree = "<group>"; };
 		E927EC9A225E022200F78063 /* walkRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkRight.png; sourceTree = "<group>"; };
+		E93AD631226B8BEA0042ADBE /* KeySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySystem.swift; sourceTree = "<group>"; };
 		E93E3004225E24CA006B111B /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
 		E93E3007225E5510006B111B /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		E95EEE8A225B598300A1C23F /* SwiftWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +195,7 @@
 			children = (
 				E93E3007225E5510006B111B /* Scene.swift */,
 				E9957F0C2268B1090055DC66 /* Physic.swift */,
+				E93AD631226B8BEA0042ADBE /* KeySystem.swift */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93AD632226B8BEA0042ADBE /* KeySystem.swift in Sources */,
 				E93E3008225E5510006B111B /* Scene.swift in Sources */,
 				E95EEE90225B598300A1C23F /* ViewController.swift in Sources */,
 				E9957F0B2268665F0055DC66 /* GameObject.swift in Sources */,
