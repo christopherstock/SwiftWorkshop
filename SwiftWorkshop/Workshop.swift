@@ -12,7 +12,7 @@
         var scene     :Scene
         /// The game level instance.
         var level     :Level
-        /** The key system. */
+        /// The key system.
         var keySystem :KeySystem
 
         ///
