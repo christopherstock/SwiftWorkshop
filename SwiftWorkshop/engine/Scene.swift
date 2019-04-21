@@ -14,6 +14,8 @@
 
         /// The SpriteKit view reference.
         var skView :SKView
+        /// A reference to the game loop.
+        var gameLoop :GameLoop?
 
         ///
         /// Creates the custom SpriteKit scene and presents it in a SpriteKit view.
@@ -39,5 +41,25 @@
         required convenience init?( coder decoder: NSCoder )
         {
             self.init()
+        }
+
+        ///
+        /// Tells your app to perform any app-specific logic to update your scene.
+        ///
+        /// - parameter timeInterval: The passed time since the last update invocation.
+        ///
+        override open func update( _ timeInterval: TimeInterval ) -> Void
+        {
+            self.gameLoop?.render()
+        }
+
+        ///
+        /// Sets the GameLoop callback for this scene.
+        ///
+        /// - parameter gameLoop: The game loop callback.
+        ///
+        func setGameLoop( _ gameLoop: GameLoop ) -> Void
+        {
+            self.gameLoop = gameLoop
         }
     }
