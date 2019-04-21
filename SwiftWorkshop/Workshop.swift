@@ -25,6 +25,8 @@
             scene     = Scene()
             level     = Level( scene: scene )
             keySystem = KeySystem()
+
+            scene.setGameLoop( self )
         }
 
         ///
@@ -37,5 +39,19 @@
         {
             view.addSubview( scene.skView )
             view.setFrameSize( scene.skView.frame.size )
+        }
+    }
+
+    ///
+    /// Extends the game workshop with game loop functionality.
+    ///
+    extension Workshop : GameLoop
+    {
+        ///
+        /// Renders one iteration of the game loop.
+        ///
+        func render() -> Void
+        {
+            print( "Workshop.render() being invoked at millis " + String( NSDate().timeIntervalSince1970 ) )
         }
     }
