@@ -67,4 +67,14 @@
                 scene.addChild( boundary )
             }
         }
+
+        ///
+        /// Renders one game loop cycle for the level.
+        ///
+        /// - parameter keySystem: The app's key system to determine currently pressed keys.
+        ///
+        func render( keySystem: KeySystem ) -> Void
+        {
+            player.render( keySystem: keySystem )
+        }
     }

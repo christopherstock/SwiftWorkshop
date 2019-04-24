@@ -52,6 +52,6 @@
         ///
         func render() -> Void
         {
-            print( "Workshop.render() being invoked at millis " + String( NSDate().timeIntervalSince1970 ) )
+            level.render( keySystem: keySystem )
         }
     }
