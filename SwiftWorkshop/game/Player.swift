@@ -20,6 +20,8 @@
         init( scene: SKScene, x: CGFloat, y: CGFloat )
         {
             super.init( scene: scene, x: x, y: y, imageFile: "walkRight.png", physic: Physic.player )
+
+            node.physicsBody?.allowsRotation = false
         }
 
         ///
