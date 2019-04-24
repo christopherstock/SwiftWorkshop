@@ -21,7 +21,7 @@
         private var items  :[GameObject]
 
         /// The game object being controlled by the user.
-        private var player :GameObject
+        private var player :Player
 
         ///
         /// Creates a new instance of the game level.
@@ -40,7 +40,7 @@
             boxes.append( GameObject( scene: scene, x: 300,  y: 0,   imageFile: "box1.png",       physic: Physic.crate ) )
             items.append( GameObject( scene: scene, x: 300,  y: 250, imageFile: "raspberry.png",  physic: Physic.none  ) )
 
-            player = GameObject( scene: scene, x: 150, y: 0, imageFile: "walkRight.png", physic: Physic.player )
+            player = Player( scene: scene, x: 150, y: 0 )
 
             // add level bounds
             createLevelBounds( scene: scene )
