@@ -9,6 +9,8 @@
     {
         /// The player's horizontal moving speed.
         static let MOVE_VELOCITY :CGFloat = 500.0
+        /** The player's jumping force. */
+        static let JUMP_VELOCITY :CGFloat = 1000.0
 
         ///
         /// Creates a new player instance.
@@ -37,6 +39,11 @@
             if ( keySystem.isPressed( keyCode: KeyCode.ARROW_RIGHT ) )
             {
                 node.physicsBody?.velocity.dx = Player.MOVE_VELOCITY
+            }
+
+            if ( keySystem.isPressed( keyCode: KeyCode.ARROW_UP ) && isVerticalResting() )
+            {
+                node.physicsBody?.velocity.dy = Player.JUMP_VELOCITY
             }
         }
     }

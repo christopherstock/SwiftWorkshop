@@ -57,4 +57,22 @@
             node.physicsBody?.restitution = physic.restitution
             node.physicsBody?.friction    = physic.friction
         }
+
+        ///
+        /// Determines if this game object is vertical resting.
+        ///
+        /// - returns: *true* if this game object is neither descending nor falling.
+        ///         *false* if the game object is in vertical movement or has no physical body at all.
+        ///
+        internal func isVerticalResting() -> Bool
+        {
+            guard let physicsBody = node.physicsBody else { return false }
+
+            let RESTING_TOLERANCE:CGFloat = 1.0
+
+            return (
+                physicsBody.velocity.dy <= RESTING_TOLERANCE
+                    && physicsBody.velocity.dy >= -RESTING_TOLERANCE
+            )
+        }
     }

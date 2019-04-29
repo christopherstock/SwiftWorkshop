@@ -9,7 +9,7 @@
         /// Uncollidable physics ( decoration or items ).
         static var none   :Physic = Physic( enabled: false, isDynamic: false, mass: 0.0,  restitution: 0.0, friction: 0.0 )
         /// The player body.
-        static var player :Physic = Physic( enabled: true,  isDynamic: true,  mass: 25.0, restitution: 0.0, friction: 0.0 )
+        static var player :Physic = Physic( enabled: true,  isDynamic: true,  mass: 25.0, restitution: 0.0, friction: 1.0 )
         /// Non movable, colliding walls.
         static var wall   :Physic = Physic( enabled: true,  isDynamic: false, mass: 0.0,  restitution: 0.0, friction: 0.2 )
         /// The movable create.
