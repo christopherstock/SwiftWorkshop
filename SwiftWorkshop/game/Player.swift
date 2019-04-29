@@ -35,10 +35,13 @@
             {
                 node.physicsBody?.velocity.dx = -Player.MOVE_VELOCITY
             }
-
-            if ( keySystem.isPressed( keyCode: KeyCode.ARROW_RIGHT ) )
+            else if ( keySystem.isPressed( keyCode: KeyCode.ARROW_RIGHT ) )
             {
                 node.physicsBody?.velocity.dx = Player.MOVE_VELOCITY
+            }
+            else
+            {
+                node.physicsBody?.velocity.dx = 0.0
             }
 
             if ( keySystem.isPressed( keyCode: KeyCode.ARROW_UP ) && isVerticalResting() )

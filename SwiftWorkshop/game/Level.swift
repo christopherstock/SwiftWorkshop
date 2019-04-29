@@ -63,7 +63,6 @@
             for boundary in boundaries
             {
                 boundary.physicsBody = SKPhysicsBody( edgeChainFrom: boundary.path! )
-                boundary.physicsBody?.friction = 1.0
 
                 scene.addChild( boundary )
             }
