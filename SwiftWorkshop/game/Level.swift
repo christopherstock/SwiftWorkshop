@@ -77,4 +77,14 @@
         {
             player.render( keySystem: keySystem )
         }
+
+        ///
+        /// Returns the current poistion of the player node.
+        ///
+        /// - return: The point of the current player position.
+        ///
+        func getPlayerPosition() -> CGPoint
+        {
+            return player.node.position
+        }
     }

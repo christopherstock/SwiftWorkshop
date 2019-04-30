@@ -16,7 +16,7 @@
         var skView   :SKView
         /// A reference to the game loop.
         var gameLoop :GameLoop?
-        /** The SpriteKit camera reference. */
+        /// The SpriteKit camera reference.
         var skCamera :SKCameraNode
 
         ///
@@ -67,5 +67,15 @@
         func setGameLoop( _ gameLoop: GameLoop ) -> Void
         {
             self.gameLoop = gameLoop
+        }
+
+        ///
+        /// Sets the scene camera to the specified target.
+        ///
+        /// - parameter target: The target point to set the camera to.
+        ///
+        func moveCameraTo( target: CGPoint ) -> Void
+        {
+            skCamera.position = target
         }
     }

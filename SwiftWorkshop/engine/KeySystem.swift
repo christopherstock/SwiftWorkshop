@@ -7,11 +7,11 @@
     ///
     enum KeyCode : UInt16
     {
-        /** Arrow Left key. */
+        /// Arrow Left key.
         case ARROW_LEFT  = 123
-        /** Arrow Right key. */
+        /// Arrow Right key.
         case ARROW_RIGHT = 124
-        /** Arrow Up key. */
+        /// Arrow Up key.
         case ARROW_UP    = 126
     }
 

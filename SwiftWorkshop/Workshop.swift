@@ -53,5 +53,7 @@
         func render() -> Void
         {
             level.render( keySystem: keySystem )
+
+            scene.moveCameraTo( target: level.getPlayerPosition() )
         }
     }

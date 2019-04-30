@@ -9,7 +9,7 @@
     {
         /// The player's horizontal moving speed.
         static let MOVE_VELOCITY :CGFloat = 500.0
-        /** The player's jumping force. */
+        /// The player's jumping force.
         static let JUMP_VELOCITY :CGFloat = 1000.0
 
         ///
