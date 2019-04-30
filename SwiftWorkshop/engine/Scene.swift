@@ -13,22 +13,28 @@
         static let HEIGHT :Int = 600
 
         /// The SpriteKit view reference.
-        var skView :SKView
+        var skView   :SKView
         /// A reference to the game loop.
         var gameLoop :GameLoop?
+        /** The SpriteKit camera reference. */
+        var skCamera :SKCameraNode
 
         ///
         /// Creates the custom SpriteKit scene and presents it in a SpriteKit view.
         ///
         override init()
         {
-            skView = SKView()
+            skView   = SKView()
+            skCamera = SKCameraNode()
 
             super.init( size: ( CGSize( width: Scene.WIDTH, height: Scene.HEIGHT ) ) )
 
             skView.frame = self.frame
             skView.presentScene( self )
             skView.showsFPS = true
+
+            addChild( skCamera )
+            self.camera = skCamera
         }
 
         ///
