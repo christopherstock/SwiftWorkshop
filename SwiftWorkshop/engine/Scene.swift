@@ -35,6 +35,8 @@
 
             addChild( skCamera )
             self.camera = skCamera
+
+            constraintCamera()
         }
 
         ///
@@ -77,5 +79,29 @@
         func moveCameraTo( target: CGPoint ) -> Void
         {
             skCamera.position = target
+        }
+
+        ///
+        /// Sets constraints to the camera in order to clip its position inside the level bounds.
+        ///
+        private func constraintCamera() -> Void
+        {
+            let constraintX = SKConstraint.positionX(
+                SKRange(
+                    lowerLimit: size.width / 2,
+                    upperLimit: CGFloat( Level.WIDTH ) - ( size.width / 2 )
+                )
+            )
+            let constraintY = SKConstraint.positionY(
+                SKRange(
+                    lowerLimit: size.height / 2,
+                    upperLimit: CGFloat( Level.HEIGHT ) - ( size.height / 2 )
+                )
+            )
+
+            skCamera.constraints = [
+                constraintX,
+                constraintY,
+            ]
         }
     }
