@@ -63,6 +63,7 @@
             for boundary in boundaries
             {
                 boundary.physicsBody = SKPhysicsBody( edgeChainFrom: boundary.path! )
+                boundary.lineWidth   = 0.0
 
                 scene.addChild( boundary )
             }

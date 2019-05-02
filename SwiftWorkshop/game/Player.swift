@@ -12,6 +12,11 @@
         /// The player's jumping force.
         static let JUMP_VELOCITY :CGFloat = 1000.0
 
+        /// The texture for the player moving left.
+        private var leftTexture  :SKTexture
+        /// The texture for the player moving right.
+        private var rightTexture :SKTexture
+
         ///
         /// Creates a new player instance.
         ///
@@ -21,6 +26,9 @@
         ///
         init( scene: SKScene, x: CGFloat, y: CGFloat )
         {
+            leftTexture  = SKTexture( image: NSImage( named: "walkLeft.png"  )! )
+            rightTexture = SKTexture( image: NSImage( named: "walkRight.png" )! )
+
             super.init( scene: scene, x: x, y: y, imageFile: "walkRight.png", physic: Physic.player )
 
             node.physicsBody?.allowsRotation = false
@@ -34,10 +42,12 @@
             if ( keySystem.isPressed( keyCode: KeyCode.ARROW_LEFT ) )
             {
                 node.physicsBody?.velocity.dx = -Player.MOVE_VELOCITY
+                node.texture = leftTexture
             }
             else if ( keySystem.isPressed( keyCode: KeyCode.ARROW_RIGHT ) )
             {
                 node.physicsBody?.velocity.dx = Player.MOVE_VELOCITY
+                node.texture = rightTexture
             }
             else
             {
