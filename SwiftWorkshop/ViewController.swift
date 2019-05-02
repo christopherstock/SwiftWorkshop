@@ -7,7 +7,7 @@
     class ViewController : NSViewController
     {
         /// The application title.
-        static let APP_TITLE = "Swift / SpriteKit Workshop, v.1.0.0 - Part 1, (c) 2019 Mayflower GmbH"
+        static let APP_TITLE = "Swift / SpriteKit Workshop, v.2.0.0 - Part 2, (c) 2019 Mayflower GmbH"
 
         ///
         /// Being invoked after the view has been loaded.
