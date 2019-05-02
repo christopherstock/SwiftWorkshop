@@ -76,6 +76,24 @@
         func render( keySystem: KeySystem ) -> Void
         {
             player.render( keySystem: keySystem )
+
+            for item in items
+            {
+                item.node.zRotation += 0.01
+
+                if ( item.node.intersects( node ) )
+                {
+                    let DURATION = 0.3
+
+                    let fadeOut = SKAction.fadeOut( withDuration: DURATION )
+                    let rotate  = SKAction.rotate( byAngle: 0.05, duration: DURATION )
+                    let scaleUp = SKAction.scale( to: 17.5, duration: DURATION )
+
+                    item.node.run( fadeOut )
+                    item.node.run( rotate  )
+                    item.node.run( scaleUp )
+                }
+            }
         }
 
         ///
