@@ -81,7 +81,7 @@
             {
                 item.node.zRotation += 0.01
 
-                if ( item.node.intersects( node ) )
+                if ( item.node.intersects( player.node ) )
                 {
                     let DURATION = 0.3
 
