@@ -30,23 +30,29 @@
         {
             pressed = [:]
 
-            NSEvent.addLocalMonitorForEvents( matching: .keyDown )
-            {
-                // flag this keyCode as pressed
-                self.pressed[ $0.keyCode ] = true
+            NSEvent.addLocalMonitorForEvents(
+                matching: .keyDown,
+                handler: {
 
-                // returning 'nil' indicates the event as handled
-                return nil
-            }
+                    // flag this keyCode as pressed
+                    self.pressed[ $0.keyCode ] = true
 
-            NSEvent.addLocalMonitorForEvents( matching: .keyUp )
-            {
-                // flag this keyCode as released
-                self.pressed[ $0.keyCode ] = false
+                    // returning 'nil' indicates the event as handled
+                    return nil
+                }
+            )
 
-                // returning 'nil' indicates the event as handled
-                return nil
-            }
+            NSEvent.addLocalMonitorForEvents(
+                matching: .keyUp,
+                handler: {
+
+                    // flag this keyCode as released
+                    self.pressed[ $0.keyCode ] = false
+
+                    // returning 'nil' indicates the event as handled
+                    return nil
+                }
+            )
         }
 
         ///
